@@ -6,7 +6,7 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Step 1: fastqc](#fastqc)
-* [Step optional: joining fastqs in batch](#join fastqs)
+* [Step optional: joining fastqs in batch](#joinfastqs)
 
 ## General info
 This is a demonstration workflow of how to analyze ChIP seq data, the data set we used are
