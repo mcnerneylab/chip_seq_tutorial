@@ -5,7 +5,6 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
-
 * [Step 1: fastqc](#fastqc)
 
 ## General info
