@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#change working directory to where all of your fastq.gz files are
+cd /Volumes/FantomHD\ 2/Lev_Kaz_ChipSeq/test
+
+#loop through sample id
+for i in seq 9 1 28;
+
+
+#perform concatenation
+do cat LB*S${i}_R1*.fastq.gz > LB_S${i}_R1_001.fastq.gz;cat LB*S${i}_R2*.fastq.gz > LB_S${i}_R2_001.fastq.gz;
+
+
+done
