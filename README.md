@@ -1,14 +1,15 @@
 # chip_seq_tutorial
 
-**This is a demonstration workflow of how to analyze ChIP seq data, the data set we used are: **
 
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
+* [Step 1: fastqc](#fastqc)
+
 ## General info
-This project is simple Lorem ipsum dolor generator.
+This is a demonstration workflow of how to analyze ChIP seq data, the data set we used are
 	
 ## Technologies
 Project is created with:
