@@ -4,7 +4,6 @@
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Setup](#setup)
 * [FastQC](#fastqc)
 * [optional: joining fastqs in batch](#joinfastqs)
 
