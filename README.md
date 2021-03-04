@@ -15,3 +15,7 @@ Project is created with:
 * Lorem version: 12.3
 * Ipsum version: 2.33
 * Ament library version: 999
+
+## FastQC
+Please see **fastQC.Rmd.**
+We use the fastqc R package to perform QC on every single raw fastq file and aggregate the report into a table.
