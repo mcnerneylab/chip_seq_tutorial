@@ -1,0 +1,22 @@
+#!/bin/bash
+
+### qsub file.name to run from anywhere
+### first step of BMW, making indexed fasta file
+
+#PBS -N bwa_index
+#PBS -S /bin/bash
+#PBS -l walltime=24:00:00
+#PBS -l nodes=1:ppn=8
+#PBS -l mem=32gb
+#PBS -o /gpfs/data/mcnerney-lab/liuweihan/chip_seq/becker_lab/bwa_index.out
+#PBS -e /gpfs/data/mcnerney-lab/liuweihan/chip_seq/becker_lab/bwa_index.err
+
+date
+
+module load gcc/6.2.0
+module load bwa/0.7.17
+
+bwa index -p mm10_bwa_idx -a bwtsw /gpfs/data/mcnerney-lab/liuweihan/chip_seq/becker_lab/mm10.fa
+
+date
+echo END
