@@ -5,8 +5,8 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [FastQC](#fastqc)
-* [optional: joining fastqs in batch](#joinfastqs)
-* [bwa alignment](#bwa alignment)
+* [Optional: joining fastqs in batch](#joinfastqs)
+* [Bwa alignment](#bwa_alignment)
 
 ## General info
 This is a demonstration workflow of how to analyze ChIP seq data, the data set we used are
