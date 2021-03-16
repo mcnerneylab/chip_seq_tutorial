@@ -7,6 +7,7 @@
 * [FastQC](#fastqc)
 * [Optional: joining fastqs in batch](#joinfastqs)
 * [bwa alignment](#bwa_alignment)
+* [convert sam to bam and sort](#samtools_sort)
 
 ## General info
 This is a demonstration workflow of how to analyze ChIP seq data, the data set we used are
@@ -30,3 +31,6 @@ Because Chip seq requires a simple alignment process to just obtain read count, 
 ### Step 1: bwa index
 bwa requires you to first index the genome fasta file. In this turorial, I followed the procedures in https://icb.med.cornell.edu/wiki/index.php/Elementolab/BWA_tutorial to download the mm10 genome fasta file from UCSC genome browser. Please see code "bwa_index" for details
 ### Step 2: bwa mem alignment
+Loop through the paired-end reads fastqs and output sam file. We use the <bwa mem> command. Please see file "bwa_mem.sh"
+
+## convert sam to bam and sort
