@@ -8,6 +8,7 @@
 * [Optional: joining fastqs in batch](#joinfastqs)
 * [bwa alignment](#bwa_alignment)
 * [convert sam to bam and sort](#samtools_sort)
+* [filter out non-uniquelly mapped reads](#samtools_filter)
 
 ## General info
 This is a demonstration workflow of how to analyze ChIP seq data, the data set we used are
@@ -36,4 +37,4 @@ Loop through the paired-end reads fastqs and output sam file. We use the <bwa me
 ### Step 3: convert sam to bam fileformat and sort
 This is achieved as an add-on step in "bwa_mem.sh" using samtools sort to sort and convert sam to bam in a single step
 	
-## convert sam to bam and sort
+## filter out non-uniquelly mapped reads
