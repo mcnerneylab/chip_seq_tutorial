@@ -33,4 +33,7 @@ bwa requires you to first index the genome fasta file. In this turorial, I follo
 ### Step 2: bwa mem alignment
 Loop through the paired-end reads fastqs and output sam file. We use the <bwa mem> command. Please see file "bwa_mem.sh"
 
+### Step 3: convert sam to bam fileformat and sort
+This is achieved as an add-on step in "bwa_mem.sh" using samtools sort to sort and convert sam to bam in a single step
+	
 ## convert sam to bam and sort
