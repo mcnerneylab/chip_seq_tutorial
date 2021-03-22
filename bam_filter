@@ -1,0 +1,28 @@
+#!/bin/bash
+### qsub file.name to run from anywhere
+
+#PBS -N bam_filter
+#PBS -S /bin/bash
+#PBS -l walltime=48:00:00
+#PBS -l nodes=1:ppn=8
+#PBS -l mem=64gb
+#PBS -o /gpfs/data/mcnerney-lab/liuweihan/chip_seq/becker_lab/bwa/bam_filter.out
+#PBS -e /gpfs/data/mcnerney-lab/liuweihan/chip_seq/becker_lab/bwa/bam_filter.err
+
+date
+
+module load dmd/2.072.1
+module load sambamba/0.6.5
+
+cd /gpfs/data/mcnerney-lab/liuweihan/chip_seq/becker_lab/bwa/bwa_mem_output
+destdir=/gpfs/data/mcnerney-lab/liuweihan/chip_seq/becker_lab/bwa/bwa_mem_output/filtered_bam
+
+for fname in *_R1_R2.bam
+do
+base=${fname%_R1*}
+echo $base
+
+sambamba view -t 12 -h -f bam -F "mapping_quality >= 1 and not (unmapped or secondary_alignment) and not ([XA] != null or [SA] != null)" \
+${base}_R1_R2.bam  -o $destdir/${base}_R1_R2_filtered.bam
+
+done

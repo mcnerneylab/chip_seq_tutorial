@@ -1,0 +1,28 @@
+#!/bin/bash
+### qsub file.name to run from anywhere
+
+#PBS -N bam_rmdup
+#PBS -S /bin/bash
+#PBS -l walltime=48:00:00
+#PBS -l nodes=1:ppn=8
+#PBS -l mem=64gb
+#PBS -o /gpfs/data/mcnerney-lab/liuweihan/chip_seq/becker_lab/bwa/bam_rmdup.out
+#PBS -e /gpfs/data/mcnerney-lab/liuweihan/chip_seq/becker_lab/bwa/bam_rmdup.err
+
+date
+
+module load dmd/2.072.1
+module load sambamba/0.6.5
+
+cd /gpfs/data/mcnerney-lab/liuweihan/chip_seq/becker_lab/bwa/bwa_mem_output/filtered_bam
+destdir=/gpfs/data/mcnerney-lab/liuweihan/chip_seq/becker_lab/bwa/bwa_mem_output/filtered_bam
+
+for fname in *_R1_R2_filtered.bam
+do
+base=${fname%_R1*}
+echo $base
+
+sambamba markdup -r -t 12 ${base}_R1_R2_filtered.bam $destdir/${base}_R1_R2_filtered_rmdup.bam
+
+done
+
