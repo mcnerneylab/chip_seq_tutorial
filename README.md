@@ -9,6 +9,7 @@
 * [bwa alignment](#bwa_alignment)
 * [convert sam to bam and sort](#samtools_sort)
 * [filter out non-uniquelly mapped reads](#samtools_filter)
+* [Peak calling with MACS2](#peak_calling)
 
 ## General info
 This is a demonstration workflow of how to analyze ChIP seq data, the data set we used are
@@ -40,3 +41,5 @@ This is achieved as an add-on step in "bwa_mem.sh" using samtools sort to sort a
 ## filter out non-uniquelly mapped reads and duplicates
 ### remove non-uniquelly mapped reads: see file "bam_filter"
 ### remove duplicate reads: see "bam_rmdup"
+
+## Peak calling with MACS2
