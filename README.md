@@ -37,4 +37,6 @@ Loop through the paired-end reads fastqs and output sam file. We use the <bwa me
 ### Step 3: convert sam to bam fileformat and sort
 This is achieved as an add-on step in "bwa_mem.sh" using samtools sort to sort and convert sam to bam in a single step
 	
-## filter out non-uniquelly mapped reads
+## filter out non-uniquelly mapped reads and duplicates
+### remove non-uniquelly mapped reads: see file "bam_filter"
+### remove duplicate reads: see "bam_rmdup"
